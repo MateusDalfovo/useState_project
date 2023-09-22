@@ -8,15 +8,15 @@ export default function Home() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
-    function handleUserAdd(){
+    function handleUserAdd() {
         console.log(
             "Nome Completo:" + name
-            +"\nEmail: " + email
+            + "\nEmail: " + email
         )
 
         Alert.alert(
             "Nome completo: " + name
-            +"\nEmail: " + email
+            + "\nEmail: " + email
         )
     }
 
@@ -28,19 +28,27 @@ export default function Home() {
                 style={styles.input}
                 placeholder="Nome completo"
 
-                value={ name }
-                onChangeText= { setName } 
+                value={name}
+                onChangeText={setName}
             />
+
+            <Text style={styles.txt}>
+                {name}
+            </Text>
 
             <TextInput
                 style={styles.input}
                 placeholder="E-mail"
 
-                value={ email }
-                onChangeText= { setEmail } 
+                value={email}
+                onChangeText={setEmail}
             />
 
-            <TouchableOpacity style={styles.btn} onPress={ handleUserAdd }>
+            <Text style={styles.txt}>
+                {email}
+            </Text>
+
+            <TouchableOpacity style={styles.btn} onPress={handleUserAdd}>
                 <Text style={styles.btnTxt}>Cadastrar</Text>
             </TouchableOpacity>
         </View>
